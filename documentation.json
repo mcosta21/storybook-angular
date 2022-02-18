@@ -9,7 +9,7 @@
     "components": [
         {
             "name": "AppComponent",
-            "id": "component-AppComponent-e3aaed5a3797159f319fa26c325da4fe8ebcc571999241929ab10e9bf96bd6332b41935f757423023ec99c2058237dfa3e77e7e95382af37ba3769afdb897926",
+            "id": "component-AppComponent-2f5c8649f335b2dc050a7207a47a5ba2f250ee53177a3d3be62b142099d49e14887c19e1316d25b0c8130214dfa60c278e1f1053212cb1fe9a04184959f937cf",
             "file": "src/app/app.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -29,6 +29,19 @@
             "outputsClass": [],
             "propertiesClass": [
                 {
+                    "name": "handleClick",
+                    "defaultValue": "() => {...}",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 11,
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
                     "name": "title",
                     "defaultValue": "'storybook-angular'",
                     "deprecated": false,
@@ -47,7 +60,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.scss']\n})\nexport class AppComponent {\n  title = 'storybook-angular';\n}\n",
+            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.scss']\n})\nexport class AppComponent {\n  title = 'storybook-angular';\n  \n  public handleClick = () => {\n    alert('Button clicked');\n  } \n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -56,7 +69,7 @@
                 }
             ],
             "stylesData": "",
-            "templateData": "\n<hello-world></hello-world>"
+            "templateData": "<main>\n    <app-title title=\"Hello World\" [size]=\"3\"></app-title>\n    <app-button text=\"Click\" (onClick)=\"handleClick\"></app-button>\n</main>"
         },
         {
             "name": "ButtonComponent",
@@ -133,7 +146,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "\r\nbutton {\r\n    width: 4rem;\r\n    height: 1rem;\r\n\r\n    .primary {\r\n        background-color: blue;\r\n    }\r\n\r\n    .secondary {\r\n        background-color: red;\r\n    }\r\n}",
+                    "data": "\r\nbutton {\r\n    width: 6rem;\r\n    height: 2rem;\r\n\r\n    &.primary {\r\n        background-color: blue;\r\n    }\r\n\r\n    &.secondary {\r\n        background-color: red;\r\n    }\r\n}",
                     "styleUrl": "./button.component.scss"
                 }
             ],
@@ -324,21 +337,21 @@
                 "name": "environment",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/environments/environment.prod.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "object",
-                "defaultValue": "{\n  production: true\n}"
-            },
-            {
-                "name": "environment",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/environments/environment.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "object",
                 "defaultValue": "{\n  production: false\n}"
+            },
+            {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/environments/environment.prod.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\n  production: true\n}"
             },
             {
                 "name": "Primary",
@@ -377,7 +390,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
-                "defaultValue": "Template.bind({\r\n  color: 'secondary'\r\n})"
+                "defaultValue": "Template.bind({})"
             },
             {
                 "name": "Template",
@@ -467,18 +480,6 @@
                     "type": "literal type"
                 }
             ],
-            "src/environments/environment.prod.ts": [
-                {
-                    "name": "environment",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/environments/environment.prod.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "object",
-                    "defaultValue": "{\n  production: true\n}"
-                }
-            ],
             "src/environments/environment.ts": [
                 {
                     "name": "environment",
@@ -489,6 +490,18 @@
                     "deprecationMessage": "",
                     "type": "object",
                     "defaultValue": "{\n  production: false\n}"
+                }
+            ],
+            "src/environments/environment.prod.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/environments/environment.prod.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\n  production: true\n}"
                 }
             ],
             "src/app/components/button/button.stories.ts": [
@@ -510,7 +523,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
-                    "defaultValue": "Template.bind({\r\n  color: 'secondary'\r\n})"
+                    "defaultValue": "Template.bind({})"
                 },
                 {
                     "name": "Template",
@@ -620,7 +633,7 @@
                 "linktype": "component",
                 "name": "AppComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/2",
+                "coverageCount": "0/3",
                 "status": "low"
             },
             {

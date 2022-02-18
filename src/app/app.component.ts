@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'storybook-angular';
+  
+  public handleClick = () => {
+    alert('Button clicked');
+  } 
 }

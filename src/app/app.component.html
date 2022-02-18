@@ -1,2 +1,18 @@
 
-<hello-world></hello-world>
+
+<main>
+    <section>
+        <header>
+            <app-title title="Sample test with Storybook and Angular" [size]="2"></app-title>
+            <span>run command: <strong>yarn storybook</strong></span>
+        </header>
+
+        <h4>Components</h4>
+
+        <app-title title="Text size small" [size]="1"></app-title>
+        <app-title title="Text size normal" [size]="2"></app-title>
+        <app-title title="Text size large" [size]="3"></app-title>
+        <app-button text="Button Primary" (onClick)="handleClick()"></app-button>
+        <app-button text="Button Secondary" color="secondary" (onClick)="handleClick()"></app-button>
+    </section>
+</main>
