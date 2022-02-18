@@ -1,0 +1,13 @@
+
+button {
+    width: 6rem;
+    height: 2rem;
+
+    &.primary {
+        background-color: blue;
+    }
+
+    &.secondary {
+        background-color: red;
+    }
+}
