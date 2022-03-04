@@ -43,9 +43,9 @@ describe('ButtonComponent', () => {
     expect(component.color).toBe('primary');
   });
 
-  it('should set button color secondary', () => {
-    component.color = 'secondary'
-    expect(component.color).toBe('secondary');
+  it('should set button color accent', () => {
+    component.color = 'accent'
+    expect(component.color).toBe('accent');
   });
   
 });

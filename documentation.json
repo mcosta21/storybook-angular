@@ -159,7 +159,7 @@
                 "args": [],
                 "line": 14
             },
-            "templateData": "<button \n    [class]=\"color\"\n    (click)=\"handleClick()\"\n>\n    {{ text }}\n</button>\n"
+            "templateData": "<button \n    mat-raised-button \n    color=\"primary\"\n    (click)=\"handleClick()\"\n>\n    {{ text }}\n</button>"
         },
         {
             "name": "TitleComponent",
@@ -232,13 +232,13 @@
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-9d7e7380e307bd3759bd91a777388885405c2554b3f16ffb8b4854e77897a39bb051157f28233f5e3d6cfd56e6864e200a2014188c7dff1652a674c0f5d6351c",
+            "id": "module-AppModule-10a0d3307a43a7a9c59dde548d677d5f838186af3bb81d091785e68eb3b7e4419a2f149926ad1351380b4146ff53336006a83930f46ea599518432177522edcf",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { AppRoutingModule } from './app-routing.module';\nimport { AppComponent } from './app.component';\nimport { TitleComponent } from './components/title/title.component';\nimport { ButtonComponent } from './components/button/button.component';\n\n@NgModule({\n  declarations: [\n    AppComponent,\n    TitleComponent,\n    ButtonComponent\n  ],\n  imports: [\n    BrowserModule,\n    AppRoutingModule\n  ],\n  providers: [],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { AppRoutingModule } from './app-routing.module';\nimport { AppComponent } from './app.component';\nimport { TitleComponent } from './components/title/title.component';\nimport { ButtonComponent } from './components/button/button.component';\n\nimport { MatButtonModule } from '@angular/material/button';\n\n@NgModule({\n  declarations: [\n    AppComponent,\n    TitleComponent,\n    ButtonComponent\n  ],\n  imports: [\n    BrowserModule,\n    AppRoutingModule,\n    MatButtonModule\n  ],\n  providers: [],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n",
             "children": [
                 {
                     "type": "providers",
@@ -396,7 +396,7 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/components/title/title.stories.ts",
+                "file": "src/app/components/button/button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
@@ -406,7 +406,7 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/components/button/button.stories.ts",
+                "file": "src/app/components/title/title.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
