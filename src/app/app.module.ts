@@ -6,18 +6,18 @@ import { AppComponent } from './app.component';
 import { TitleComponent } from './components/title/title.component';
 import { ButtonComponent } from './components/button/button.component';
 
-import { MatButtonModule } from '@angular/material/button';
+import { KCustomButtonModule } from 'custom-components';
 
 @NgModule({
   declarations: [
     AppComponent,
     TitleComponent,
-    ButtonComponent
+    ButtonComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatButtonModule
+    KCustomButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

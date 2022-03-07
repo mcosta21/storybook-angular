@@ -2,6 +2,7 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "./out-tsc/app",
+    "baseUrl": "./",
     "types": []
   },
   "files": [
@@ -13,5 +14,8 @@
   ],
   "exclude": [
     "**/*.stories.*"
-  ]
+  ],
+  "angularCompilerOptions": {
+    "enableIvy": false
+  }
 }
