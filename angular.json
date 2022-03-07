@@ -31,7 +31,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "projects/custom-components/styles.scss"
             ],
             "scripts": []
           },
@@ -145,7 +146,7 @@
           "options": {
             "main": "projects/custom-components/src/test.ts",
             "tsConfig": "projects/custom-components/tsconfig.spec.json",
-            "karmaConfig": "projects/custom-components/karma.conf.js",
+            "karmaConfig": "projects/custom-components/karma.conf.js"
           }
         }
       }

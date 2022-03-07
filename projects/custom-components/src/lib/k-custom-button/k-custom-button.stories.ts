@@ -11,7 +11,10 @@ export default {
         declarations: [],
         imports: [CommonModule, MatButtonModule],
       }),
-    ]
+    ],
+    argTypes: {
+      onClick: { action: 'clicked' }
+    }
 } as Meta;
 
 const Template: Story = (args) => ({
