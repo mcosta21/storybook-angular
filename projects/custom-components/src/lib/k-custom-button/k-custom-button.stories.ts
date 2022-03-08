@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { Meta, Story, moduleMetadata } from '@storybook/angular';
-import { KCustomButtonComponent } from 'custom-components';
+import { KCustomButtonComponent } from './k-custom-button.component';
 
 export default {
     title: 'Lib/KCustomButtonComponent',

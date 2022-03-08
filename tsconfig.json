@@ -5,16 +5,14 @@
     "baseUrl": "./src/",
     "paths": {
       "custom-components": [
-        "dist-lib/custom-components/custom-components",
-        "dist-lib/custom-components"
+        "projects/custom-components/src/public-api.ts",
       ]
     },
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
-    "noImplicitOverride": true,
-    "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
+    "noImplicitAny": false,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "declaration": false,

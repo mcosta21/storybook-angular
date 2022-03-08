@@ -12,7 +12,7 @@ import { KCustomButtonModule } from 'custom-components';
   declarations: [
     AppComponent,
     TitleComponent,
-    ButtonComponent,
+    ButtonComponent
   ],
   imports: [
     BrowserModule,
