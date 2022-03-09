@@ -11,7 +11,7 @@ export class KCustomButtonComponent {
   @Input() public text: string = '';
   @Input() public color: ButtonColor = 'primary';
   
-  @Output() public onClick: EventEmitter<boolean> = new EventEmitter(); 
+  @Output() public onClick: EventEmitter<any> = new EventEmitter(); 
 
   constructor() { }
 

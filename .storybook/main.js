@@ -5,11 +5,15 @@ module.exports = {
   ],
   "addons": [
     "@storybook/addon-links",
+    "@storybook/addon-actions",
     "@storybook/addon-essentials",
     "@storybook/addon-interactions"
   ],
   "framework": "@storybook/angular",
   "core": {
     "builder": "webpack5"
-  }
+  },
+  "features": {
+    "interactionsDebugger": true,
+  },
 }

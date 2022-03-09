@@ -238,7 +238,7 @@
         },
         {
             "name": "KCustomButtonComponent",
-            "id": "component-KCustomButtonComponent-173b586b7c7d015dfa88ce0985bee642e134343f084bedda630993f3fa7381b3c5cb1974d55dea2a8a35b1d502d6eca3a4465309a83fc4aa173e81a3e4b332ac",
+            "id": "component-KCustomButtonComponent-a1b3c4fd41dbfa96382c9e6a2276cde9685b7e25ef05605dae210739489594b0471cc0d8d84ba43fd3adc121d4d951dae77d0454543eae4da99c8fff2e0316df",
             "file": "projects/custom-components/src/lib/k-custom-button/k-custom-button.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -281,7 +281,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "line": 14,
-                    "type": "EventEmitter<boolean>"
+                    "type": "EventEmitter<any>"
                 }
             ],
             "propertiesClass": [
@@ -307,7 +307,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, EventEmitter, Input, Output } from '@angular/core';\nimport { ButtonColor } from './button.model';\n\n@Component({\n  selector: 'k-custom-button',\n  templateUrl: './k-custom-button.component.html',\n  styleUrls: ['./k-custom-button.component.scss']\n})\nexport class KCustomButtonComponent {\n\n  @Input() public text: string = '';\n  @Input() public color: ButtonColor = 'primary';\n  \n  @Output() public onClick: EventEmitter<boolean> = new EventEmitter(); \n\n  constructor() { }\n\n  public handleClick = () => {\n    this.onClick.emit();\n  }\n}\n\n",
+            "sourceCode": "import { Component, EventEmitter, Input, Output } from '@angular/core';\nimport { ButtonColor } from './button.model';\n\n@Component({\n  selector: 'k-custom-button',\n  templateUrl: './k-custom-button.component.html',\n  styleUrls: ['./k-custom-button.component.scss']\n})\nexport class KCustomButtonComponent {\n\n  @Input() public text: string = '';\n  @Input() public color: ButtonColor = 'primary';\n  \n  @Output() public onClick: EventEmitter<any> = new EventEmitter(); \n\n  constructor() { }\n\n  public handleClick = () => {\n    this.onClick.emit();\n  }\n}\n\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -324,7 +324,7 @@
                 "args": [],
                 "line": 14
             },
-            "templateData": "<button \n    mat-raised-button \n    [color]=\"color\"\n    (click)=\"handleClick()\"\n>\n    {{ text }}\n</button>\n"
+            "templateData": "<button \n    mat-raised-button \n    [color]=\"color\"\n    (click)=\"onClick.emit()\"\n>\n    {{ text }}\n</button>\n"
         },
         {
             "name": "TitleComponent",
@@ -580,6 +580,16 @@
     "miscellaneous": {
         "variables": [
             {
+                "name": "actionsData",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/custom-components/src/lib/k-custom-button/k-custom-button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\r\n  onClick: action('handleClick'),\r\n}"
+            },
+            {
                 "name": "context",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -715,7 +725,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "(args) => ({\r\n  props: args,\r\n})"
+                "defaultValue": "(args) => ({\r\n  props: {\r\n    ...args,\r\n    onClick: actionsData.onClick\r\n  },\r\n})"
             }
         ],
         "functions": [],
@@ -775,6 +785,48 @@
             }
         ],
         "groupedVariables": {
+            "projects/custom-components/src/lib/k-custom-button/k-custom-button.stories.ts": [
+                {
+                    "name": "actionsData",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/custom-components/src/lib/k-custom-button/k-custom-button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\r\n  onClick: action('handleClick'),\r\n}"
+                },
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/custom-components/src/lib/k-custom-button/k-custom-button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Secondary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/custom-components/src/lib/k-custom-button/k-custom-button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/custom-components/src/lib/k-custom-button/k-custom-button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "(args) => ({\r\n  props: {\r\n    ...args,\r\n    onClick: actionsData.onClick\r\n  },\r\n})"
+                }
+            ],
             "src/test.ts": [
                 {
                     "name": "context",
@@ -867,38 +919,6 @@
                     "ctype": "miscellaneous",
                     "subtype": "variable",
                     "file": "src/app/components/button/button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "(args) => ({\r\n  props: args,\r\n})"
-                }
-            ],
-            "projects/custom-components/src/lib/k-custom-button/k-custom-button.stories.ts": [
-                {
-                    "name": "Primary",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/custom-components/src/lib/k-custom-button/k-custom-button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Secondary",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/custom-components/src/lib/k-custom-button/k-custom-button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/custom-components/src/lib/k-custom-button/k-custom-button.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
@@ -1034,6 +1054,16 @@
                 "name": "KCustomButtonComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/6",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/custom-components/src/lib/k-custom-button/k-custom-button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "actionsData",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
                 "status": "low"
             },
             {
